@@ -71,9 +71,28 @@ public class GenerateCube : MonoBehaviour
             
             new Vector3(1.0f, -1.0f, -1.0f),
             new Vector3(1.0f, 1.0f, -1.0f),
-            new Vector3(1.0f, 1.0f, 1.0f)
+            new Vector3(1.0f, 1.0f, 1.0f),
 
             // Define more vertices here!
+            // Front face
+            new Vector3(-1.0f, -1.0f, 1.0f),
+            new Vector3(1.0f, -1.0f, 1.0f),
+            new Vector3(1.0f, 1.0f, 1.0f),
+
+            new Vector3(-1.0f, -1.0f, 1.0f),
+            new Vector3(1.0f, 1.0f, 1.0f),
+            new Vector3(-1.0f, 1.0f, 1.0f),
+
+            // Back face
+            new Vector3(-1.0f, -1.0f, -1.0f),
+            new Vector3(1.0f, 1.0f, -1.0f),
+            new Vector3(1.0f, -1.0f, -1.0f),
+
+            new Vector3(-1.0f, -1.0f, -1.0f),
+            new Vector3(-1.0f, 1.0f, -1.0f),
+            new Vector3(1.0f, 1.0f, -1.0f)
+
+          
         });
 
         // Step 2: Define the vertex colours. There is a one-to-one index
@@ -118,6 +137,13 @@ public class GenerateCube : MonoBehaviour
             Color.yellow
             
             // Define more colours here!
+            Color.blue,
+            Color.blue,
+            Color.blue,
+
+            Color.blue,
+            Color.blue,
+            Color.blue,
         });
 
         // Step 3: Define the indices. The indices "connect" vertices together
@@ -138,5 +164,6 @@ public class GenerateCube : MonoBehaviour
         // define the mesh surface using quads (MeshTopology.Quads).
 
         return mesh;
+        
     }
 }
